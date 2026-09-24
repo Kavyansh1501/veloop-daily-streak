@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
+const dailyStreakRoutes = require('./routes/dailyStreakRoutes');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
@@ -13,7 +14,7 @@ app.get('/api/health', (req, res) =>
 );
 
 app.use('/api/auth', authRoutes);
-// Phase 2 adds: app.use('/api/daily-streak', dailyStreakRoutes);
+app.use('/api/daily-streak', dailyStreakRoutes);
 
 app.use((req, res) => res.status(404).json({ success: false, message: 'Route not found.' }));
 app.use(errorHandler);
