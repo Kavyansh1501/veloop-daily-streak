@@ -1,0 +1,24 @@
+:root {
+  --vl-bg: #0d0a16;
+  --vl-surface: #171226;
+  --vl-surface-light: #1f1832;
+  --vl-purple: #7c3aed;
+  --vl-purple-light: #a78bfa;
+  --vl-gold: #f5b301;
+  --vl-gold-light: #fbbf24;
+  --vl-green: #22c55e;
+  --vl-text: #f4f2fa;
+  --vl-text-muted: #a79fc2;
+  --vl-border: rgba(167, 139, 250, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--vl-bg);
+  color: var(--vl-text);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
